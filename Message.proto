@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option go_package = "github.com/bellajkhalid/pb_go_grpc";
+
+message Ammont{
+    int64 ammunt=1;
+    string currency=2;
+}
+// The Request message containing the service_1
+message Request{
+    Ammont name=1;
+}
+// The response message containing the service_1
+message Response{
+    bytes Bdf=1;
+    bytes word=2;
+}
+// The service_1 service definition.
+ service service_1{
+    rpc S_response (Request) returns (Response);
+ }
+
+
